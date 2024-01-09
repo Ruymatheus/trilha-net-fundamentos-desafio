@@ -32,7 +32,7 @@ namespace DesafioFundamentos.Models
                 {
                  Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
 
-                // TODO: Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
+               
                 
                 // Realiza o calculo de custo total e retira a placa da lista de veículos
                 int horas = 0;
