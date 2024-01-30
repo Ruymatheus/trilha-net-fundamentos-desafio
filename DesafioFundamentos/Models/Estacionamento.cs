@@ -45,36 +45,37 @@ namespace DesafioFundamentos.Models
             {
                     // Verifica se o veículo existe
                 if  (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
-                    {Console.WriteLine("Digite seu nome");
-                     Nome=Console.ReadLine().ToUpper();
-                     //Verifica se a pessoa é um funcionário
+                {
+                    Console.WriteLine("Digite seu nome");
+                    Nome=Console.ReadLine().ToUpper();
+                    //Verifica se a pessoa é um funcionário
                     if(Pessoa.nomesCadastradosFuncionarios.Contains(Nome))                                                  //*Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
-                        {
-                            veiculos.Remove(placa);
-                            indicacaovalida = true;
-                            Console.WriteLine($"O veículo {placa} foi removido e até o próximo dia de trabalho");
-                        }                                                                                                       //*Realiza o calculo de custo total e retira a placa da lista de veículos
+                    {
+                        veiculos.Remove(placa);
+                        indicacaovalida = true;
+                        Console.WriteLine($"O veículo {placa} foi removido e até o próximo dia de trabalho");
+                    }                                                                                                       //*Realiza o calculo de custo total e retira a placa da lista de veículos
                                                                                                                             //*int horas = 0;
                     else
                     {
                         if(Pessoa.nomesCadastradosClientes.Contains(Nome))
                         {
-                        decimal valorTotal = 0;                                                                                                     //*horas= Convert.ToInt32(Console.ReadLine());
-                        DateTime horaSaida = DateTime.Now;
-                        TimeSpan tempoEstacionado = horaSaida - horarioDeEntrada;
-                        int horasEstacionadas = (int)Math.Floor(tempoEstacionado.TotalHours);
-                        valorTotal = precoInicial + (precoPorHora * horasEstacionadas);                                                                                                        //*valorTotal = precoInicial + (precoPorHora * horas); 
-                        veiculos.Remove(placa);
-                        indicacaovalida = true;
-                        Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
+                            decimal valorTotal = 0;                                                                                                     //*horas= Convert.ToInt32(Console.ReadLine());
+                            DateTime horaSaida = DateTime.Now;
+                            TimeSpan tempoEstacionado = horaSaida - horarioDeEntrada;
+                            int horasEstacionadas = (int)Math.Floor(tempoEstacionado.TotalHours);
+                            valorTotal = precoInicial + (precoPorHora * horasEstacionadas);                                                                                                        //*valorTotal = precoInicial + (precoPorHora * horas); 
+                            veiculos.Remove(placa);
+                            indicacaovalida = true;
+                            Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
                         }
                     }
-                    }
+                }
                 else
                 {
-                Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
-                Console.WriteLine("Tente digitar a placa do veículo novamente:");
-                indicacaovalida = true;
+                    Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
+                    Console.WriteLine("Tente digitar a placa do veículo novamente:");
+                    indicacaovalida = true;
                 }
           
             }while(indicacaovalida == false);
