@@ -23,11 +23,11 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite o seu nome:");
             Nome =Console.ReadLine().ToUpper();
             if(Pessoa.nomesCadastradosClientes.Contains(Nome)||Pessoa.nomesCadastradosFuncionarios.Contains(Nome))
-                { // Solicita ao usuário a placa do veículo e armazena na lista veiculos.
+            {   // Solicita ao usuário a placa do veículo e armazena na lista veiculos.
                 Console.WriteLine("Digite a placa do veículo para estacionar:");
                 veiculos.Add(Console.ReadLine());
                 horarioDeEntrada = DateTime.Now;
-                }
+            }
             else
             {
                 Console.WriteLine("Cadastre um cliente ou um funcionário antes de adicionar um veículo:"); 
