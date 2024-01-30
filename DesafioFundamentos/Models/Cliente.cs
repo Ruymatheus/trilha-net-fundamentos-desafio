@@ -13,10 +13,10 @@ namespace DesafioFundamentos.Models
         public override void CadastrarUsuario()
         {
             Console.WriteLine("Indique seu nome:");
-            Nome = Console.ReadLine().ToUpper();
+            nome = Console.ReadLine().ToUpper();
 
             // Verifica se o nome já está cadastrado
-            if (nomesCadastradosClientes.Contains(Nome)||nomesCadastradosFuncionarios.Contains(Nome))
+            if (nomesCadastradosClientes.Contains(nome)||nomesCadastradosFuncionarios.Contains(nome))
             {
                 Console.WriteLine("Este nome já está cadastrado.");
                 return; // Sai do método sem adicionar o nome à lista
@@ -26,10 +26,10 @@ namespace DesafioFundamentos.Models
             CPF = Console.ReadLine();
 
             // Adiciona o nome e o CPF às listas de nomes e CPFs cadastrados
-            nomesCadastradosClientes.Add(Nome);
+            nomesCadastradosClientes.Add(nome);
             cpfsCadastradosClientes.Add(CPF);
             cupom = random.Next(10000, 99999).ToString();
-            Console.WriteLine($"Seja bem vindo {Nome}!\nQue sorte! Você Ganhou um cupom de desconto: {cupom}");
+            Console.WriteLine($"Seja bem vindo {nome}!\nQue sorte! Você Ganhou um cupom de desconto: {cupom}");
             
         }
         public override void ListarCadastrados()
