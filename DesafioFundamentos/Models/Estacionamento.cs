@@ -8,7 +8,7 @@ namespace DesafioFundamentos.Models
       
         private List<string> cpf = new List<string>();
         private DateTime horarioDeEntrada;
-        private string Nome;
+        private string nome;
         public Cliente cliente=new Cliente();
         public Funcionario funcionario=new Funcionario();
 
@@ -21,8 +21,8 @@ namespace DesafioFundamentos.Models
         public void AdicionarVeiculo()
         {
             Console.WriteLine("Digite o seu nome:");
-            Nome =Console.ReadLine().ToUpper();
-            if(Pessoa.nomesCadastradosClientes.Contains(Nome)||Pessoa.nomesCadastradosFuncionarios.Contains(Nome))
+            nome =Console.ReadLine().ToUpper();
+            if(Pessoa.nomesCadastradosClientes.Contains(nome)||Pessoa.nomesCadastradosFuncionarios.Contains(nome))
             {   // Solicita ao usuário a placa do veículo e armazena na lista veiculos.
                 Console.WriteLine("Digite a placa do veículo para estacionar:");
                 veiculos.Add(Console.ReadLine());
@@ -47,9 +47,9 @@ namespace DesafioFundamentos.Models
                 if  (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
                 {
                     Console.WriteLine("Digite seu nome");
-                    Nome=Console.ReadLine().ToUpper();
+                    nome=Console.ReadLine().ToUpper();
                     //Verifica se a pessoa é um funcionário
-                    if(Pessoa.nomesCadastradosFuncionarios.Contains(Nome))                                                  //*Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+                    if(Pessoa.nomesCadastradosFuncionarios.Contains(nome))                                                  //*Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
                     {
                         veiculos.Remove(placa);
                         indicacaovalida = true;
@@ -58,7 +58,7 @@ namespace DesafioFundamentos.Models
                                                                                                                             //*int horas = 0;
                     else
                     {
-                        if(Pessoa.nomesCadastradosClientes.Contains(Nome))
+                        if(Pessoa.nomesCadastradosClientes.Contains(nome))
                         {
                             decimal valorTotal = 0;                                                                                                     //*horas= Convert.ToInt32(Console.ReadLine());
                             DateTime horaSaida = DateTime.Now;
