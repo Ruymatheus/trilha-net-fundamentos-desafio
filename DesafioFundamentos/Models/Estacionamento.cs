@@ -7,7 +7,7 @@ namespace DesafioFundamentos.Models
         private List<string> veiculos = new List<string>();
       
         private List<string> cpf = new List<string>();
-        private DateTime horarioDeEntrada;
+        private DateTime horarioDeEntrada; //Modificarei para lista
         private string nome;
         public Cliente cliente=new Cliente();
         public Funcionario funcionario=new Funcionario();
