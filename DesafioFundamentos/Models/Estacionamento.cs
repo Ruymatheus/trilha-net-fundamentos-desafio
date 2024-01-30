@@ -30,7 +30,7 @@ namespace DesafioFundamentos.Models
                 }
             else
             {
-             Console.WriteLine("Cadastre um cliente ou um funcionário antes de adicionar um veículo:"); 
+                Console.WriteLine("Cadastre um cliente ou um funcionário antes de adicionar um veículo:"); 
             }    
         }
 
