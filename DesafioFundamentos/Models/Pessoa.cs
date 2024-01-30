@@ -10,7 +10,7 @@ namespace DesafioFundamentos.Models
         protected static List<string> cpfsCadastradosFuncionarios = new List<string>();
         protected static List<string> cpfsCadastradosClientes = new List<string>();
 
-        public string Nome { get; set; }
+        public string nome { get; set; }
         public string CPF { get; set; }
 
         public virtual void CadastrarUsuario()
