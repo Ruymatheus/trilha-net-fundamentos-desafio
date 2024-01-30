@@ -5,7 +5,7 @@ namespace DesafioFundamentos.Models
         private decimal precoInicial = 0;
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
-        private readonly List<string> nom = new List<string>();
+      
         private List<string> cpf = new List<string>();
         private DateTime horarioDeEntrada;
         private string Nome;
